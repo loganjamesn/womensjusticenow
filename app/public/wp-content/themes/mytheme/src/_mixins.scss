@@ -1,0 +1,8 @@
+@mixin smoothTransition {
+	transition: all .2s cubic-bezier(.77,0,.175,1) !important;
+	transition-delay: 0s !important;
+}
+@mixin smoothAnimation {
+	animation-duration: .4s !important;
+	animation-timing-function: cubic-bezier(.77,0,.175,1) !important;
+}

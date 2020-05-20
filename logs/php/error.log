@@ -122,3 +122,14 @@ Stack trace:
 #2 /Users/ppwd/projects/womensjusticenow/app/public/index.php(17): require('/Users/ppwd/pro...')
 #3 {main}
   thrown in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/front-page.php on line 8
+[20-May-2020 12:41:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_advanced_excerpt() in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/includes/section-issues.php:22
+Stack trace:
+#0 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template.php(725): require()
+#1 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template.php(672): load_template('/Users/ppwd/pro...', false)
+#2 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/general-template.php(168): locate_template(Array, true, false)
+#3 /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/front-page.php(38): get_template_part('includes/sectio...', 'issues')
+#4 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template-loader.php(106): include('/Users/ppwd/pro...')
+#5 /Users/ppwd/projects/womensjusticenow/app/public/wp-blog-header.php(19): require_once('/Users/ppwd/pro...')
+#6 /Users/ppwd/projects/womensjusticenow/app/public/index.php(17): require('/Users/ppwd/pro...')
+#7 {main}
+  th in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/includes/section-issues.php on line 22

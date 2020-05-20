@@ -16,11 +16,35 @@
 	</div>
 
 	<?php get_template_part('includes/section', 'signupform');?>
-
-	<div class="container">
-		<?php get_template_part('includes/section', 'content');?>
-
-		<?php get_search_form();?>
+	
+	<div class="welcome-content">
+		<div class="container narrow">
+			<div class="welcome-heading">
+				<h1 class="page-title split-words underline blue"><?php the_field('subheading');?></h1>	
+			</div>
+			<div class="welcome-text">
+				<div class="row">
+					<div class="col-md-5">
+						<button class="red"><a href="/issues/">Our Issues</a></button>
+					</div>
+					<div class="col-md-7">
+						<?php get_template_part('includes/section', 'content');?>		
+					</div>
+				</div>	
+			</div>
+		</div>		
 	</div>
+	<div class="issues">
+		<?php get_template_part('includes/section', 'issues');?>	
+	</div>
+	<div class="block-quote gray-bg">
+		<div class="container small">
+			<button class="yellow solid"><a href="/issues/">Our Issues</a></button>
+			<h2><?php the_field('block_quote');?></h2>			
+		</div>
+	</div>
+<!-- 	<div class="share-our-vision">
+		<?php get_template_part('includes/section', 'shareourvision');?>	
+	</div> -->
 </section>
 <?php get_footer();?>

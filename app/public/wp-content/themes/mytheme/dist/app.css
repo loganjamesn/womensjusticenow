@@ -12233,7 +12233,7 @@ footer .container .footer-links ul li {
   text-transform: uppercase;
 }
 footer .container .footer-links ul li a {
-  color: #bbb;
+  color: #8a96c1;
   letter-spacing: 1.1px;
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
@@ -12268,7 +12268,7 @@ footer .container hr {
   float: left;
   width: 100%;
   margin: 60px 0 30px;
-  border-top: 3px solid #bbb;
+  border-top: 3px solid #8a96c1;
 }
 footer .container .sub-footer {
   float: left;
@@ -12280,7 +12280,7 @@ footer .container .sub-footer .logo-container svg {
   width: 77px;
 }
 footer .container .sub-footer .logo-container svg path {
-  fill: #485eae;
+  fill: #8a96c1;
   transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
   transition-delay: 0s !important;
 }
@@ -12290,7 +12290,7 @@ footer .container .sub-footer .logo-container svg:hover path {
 footer .container .sub-footer .footer-meta {
   text-align: right;
   padding-left: 45px;
-  color: #bbb;
+  color: #8a96c1;
   font-size: 13px;
   font-family: "Galano Grotesque Alt", sans-serif;
 }
@@ -12335,6 +12335,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   margin-top: 110px;
+  font-size: 20px;
 }
 @media (max-width: 991px) {
   body {
@@ -12349,6 +12350,9 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 58px;
   color: #121416;
+}
+h1.page-title {
+  margin-bottom: 30px;
 }
 h1.page-title.underline span {
   position: relative;
@@ -12365,6 +12369,9 @@ h1.page-title.underline span:after {
   left: -10px;
   padding: 0 1px;
   z-index: -1;
+}
+h1.page-title.underline.blue span:after {
+  background: #485eae;
 }
 @media (max-width: 991px) {
   h1 {
@@ -12395,6 +12402,10 @@ h1.page-title.underline span:after {
 .page-wrap {
   width: 100%;
   overflow-x: hidden;
+  min-height: 50vh;
+}
+.page-wrap.content-page {
+  padding: 100px 0;
 }
 
 @media (max-width: 991px) {
@@ -12404,6 +12415,12 @@ h1.page-title.underline span:after {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+.container.narrow {
+  max-width: 970px;
+}
+.container.small {
+  max-width: 720px;
 }
 
 button, [type=button], [type=reset], [type=submit] {
@@ -12416,6 +12433,10 @@ button, [type=button], [type=reset], [type=submit] {
   color: #485eae;
   font-family: "Galano Grotesque Alt";
   text-align: center;
+}
+button.red, [type=button].red, [type=reset].red, [type=submit].red {
+  border: 3px solid #9b3555;
+  color: #9b3555;
 }
 button.solid, [type=button].solid, [type=reset].solid, [type=submit].solid {
   background: #485eae;
@@ -12463,6 +12484,11 @@ button a:before, button span:before, [type=button] a:before, [type=button] span:
 
 button:hover, [type=button]:hover, [type=reset]:hover, [type=submit]:hover {
   background: #485eae;
+  color: #fff;
+}
+button:hover.red, [type=button]:hover.red, [type=reset]:hover.red, [type=submit]:hover.red {
+  border: 3px solid #9b3555;
+  background: #9b3555;
   color: #fff;
 }
 button:hover.solid, [type=button]:hover.solid, [type=reset]:hover.solid, [type=submit]:hover.solid {
@@ -12641,6 +12667,171 @@ form .form-group button span {
   line-height: 39px;
 }
 
+.issues-grid {
+  width: 100%;
+  float: left;
+  display: table;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+.issues-grid .single-issue {
+  width: calc(33.33% - 12px);
+  height: calc(500px - 12px);
+  float: none;
+  display: inline-block;
+  margin: 0 6px 6px;
+  max-width: 100%;
+  border-radius: 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.4s !important;
+}
+.issues-grid .single-issue .grid-image-container {
+  height: 100%;
+  background: #1c212f;
+}
+.issues-grid .single-issue .grid-image-container .grid-image {
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
+  transition-delay: 0s !important;
+}
+.issues-grid .single-issue .grid-image-container .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #485eae;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.4s !important;
+}
+.issues-grid .single-issue a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.issues-grid .single-issue .wrapper {
+  min-height: 125px;
+  max-width: 100%;
+  background: #1c212f;
+  bottom: 0;
+  position: absolute;
+  top: auto;
+  transform: none;
+  z-index: 98;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.issues-grid .single-issue .wrapper h3 {
+  max-width: 100%;
+  padding: 35px 85px 35px 85px;
+  color: #fff;
+  width: 100%;
+  font-size: 22px;
+  line-height: 1.27em;
+  transition: 0s all;
+}
+.issues-grid .single-issue .wrapper .teaser {
+  position: absolute;
+  transform: translateY(20%);
+  transition: 0.15s;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 85px;
+  opacity: 0;
+  line-height: 150%;
+  max-height: 0;
+  overflow: hidden;
+  color: #fff;
+  transition: all 0s !important;
+}
+.issues-grid .single-issue .wrapper a.learn-more {
+  color: #fff;
+  font-family: "Galano Grotesque Alt";
+  position: absolute;
+  display: inline-block;
+  font-size: 17px;
+  margin: 0 85px;
+  transform: translateY(100%);
+  transition: 0.15s;
+  opacity: 0;
+  width: inherit;
+}
+.issues-grid .single-issue .wrapper a.learn-more i {
+  font-size: 13px;
+  margin-right: 5px;
+}
+.issues-grid .single-issue .wrapper a.learn-more span {
+  display: inline-block;
+  border-bottom: 2px solid;
+  line-height: 1em;
+}
+.issues-grid .single-issue svg {
+  bottom: 30px;
+  right: 25px;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  z-index: 99;
+  fill: #fff;
+}
+.issues-grid .single-issue:hover {
+  transform: scale(1.05);
+  z-index: 999;
+  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.08);
+}
+.issues-grid .single-issue:hover .overlay {
+  opacity: 1 !important;
+}
+.issues-grid .single-issue:hover .wrapper {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+}
+.issues-grid .single-issue:hover .wrapper h3 {
+  padding-top: 0;
+  padding-bottom: 20px;
+  width: 100%;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.4s !important;
+}
+.issues-grid .single-issue:hover .wrapper .teaser {
+  padding: 0 85px;
+  position: relative;
+  transform: none;
+  float: none;
+  overflow: visible;
+  max-height: 100%;
+  opacity: 1;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.4s !important;
+}
+@media (max-width: 991px) {
+  .issues-grid .single-issue {
+    width: 100% !important;
+    float: left;
+    margin: 0 0 15px 0;
+  }
+}
+
 .home .signup-form {
   background: #1c212f;
   padding: 50px;
@@ -12660,5 +12851,60 @@ form .form-group button span {
     max-width: 100%;
     top: -20px;
     padding: 30px 30px 15px;
+  }
+}
+.home .welcome-content {
+  width: 100%;
+  display: block;
+  float: left;
+}
+.home .welcome-content h1 {
+  max-width: 575px;
+  float: left;
+}
+.home .welcome-content .welcome-text {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  float: left;
+  width: 100%;
+}
+.home .block-quote {
+  width: 100%;
+  padding: 320px 0 120px;
+  text-align: center;
+  z-index: -1;
+  margin-top: -280px;
+  background: #fc9690;
+  display: block;
+  float: left;
+}
+.home .block-quote button {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+.home .block-quote h2 {
+  display: inline-block;
+  float: none;
+  clear: both;
+  text-align: left;
+}
+@media (max-width: 991px) {
+  .home .welcome-content {
+    margin-top: 30px;
+  }
+  .home .welcome-content .welcome-text {
+    margin-top: 45px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .home .welcome-content .welcome-text button {
+    margin-bottom: 45px;
+    display: inline-block;
+  }
+  .home .welcome-content .welcome-text p {
+    text-align: left;
+  }
+  .home .block-quote {
+    padding: 280px 0 80px;
   }
 }

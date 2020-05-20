@@ -1,0 +1,159 @@
+.issues-grid {
+	width: 100%;
+	float: left;
+	display: table;
+	padding: 0 20px;
+	margin-bottom: 60px;
+	.single-issue {
+		width: calc(33.33% - 12px);
+   		height: calc(500px - 12px);
+   		float: none;
+	    display: inline-block;
+	    margin: 0 6px 6px;
+	    max-width: 100%;
+	    border-radius: 0;
+	    box-shadow: 4px 4px 4px rgba(0,0,0,0);
+	    position: relative;
+	    overflow: hidden;
+	    @include smoothTransition;
+	    transition-duration: 0.4s !important;
+	    .grid-image-container {
+	    	height: 100%;
+    		background: $c_dark;
+    		.grid-image {
+    			background-size: cover !important;
+			    background-position: center !important;
+			    height: 100%;
+			    width: 100%;
+			    opacity: 1;
+	    		@include smoothTransition;
+    		}
+    		.overlay {
+    			position: absolute;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			    background: $c_blue;
+			    opacity: 0;
+			    @include smoothTransition;
+			    transition-duration: 0.4s !important;
+    		}
+	    }
+	    a {
+	    	position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 99;
+	    }
+	    .wrapper {
+    	    min-height: 125px;
+    		max-width: 100%;
+    		background: $c_dark;
+    		bottom: 0;
+		    position: absolute;
+		    top: auto;
+		    transform: none;
+		    z-index: 98;
+		    left: 0;
+		    right: 0;
+		    display: flex;
+		    align-items: center;
+		    h3 {
+		    	max-width: 100%;
+    			padding: 35px 85px 35px 85px;
+    			color: $c_white;
+    			width:100%;
+    			font-size: 22px;
+			    line-height: 1.27em;
+			    transition: 0s all;
+		    }
+		    .teaser {
+		    	position: absolute;
+			    transform: translateY(20%);
+			    transition: .15s;
+			    width: 100%;
+			    left: 0;
+			    right: 0;
+   		 		padding: 0 85px;
+			    opacity: 0;
+			    line-height: 150%;
+			    max-height: 0;
+			    overflow: hidden;
+			    color: $c_white;
+   		 		transition: all 0s !important;
+		    }
+		    a.learn-more {
+	    	    color: $c_white;
+			    font-family: "Galano Grotesque Alt";
+			    position: absolute;
+			    display: inline-block;
+			    font-size: 17px;
+		        margin: 0 85px;
+			    transform: translateY(100%);
+			    transition: .15s;
+			    opacity: 0;
+    			width: inherit;
+    			i {
+    				font-size: 13px;
+    				margin-right: 5px;
+    			}
+    			span {
+    				display: inline-block;
+				    border-bottom: 2px solid;
+				    line-height: 1em;
+    			}
+		    }
+	    }
+	    svg {
+    	    bottom: 30px;
+		    right: 25px;
+		    position: absolute;
+		    height: 40px;
+		    width: 40px;
+		    z-index: 99;
+		    fill: #fff;
+	    }
+	    &:hover {
+	    	transform: scale(1.05);
+	    	z-index: 999;
+	    	box-shadow: 4px 4px 24px rgba(0,0,0,.08);
+	    	.overlay {
+	    		opacity: 1 !important;
+	    	}
+	    	.wrapper {
+			    height: 100%;
+			    flex-direction: column;
+   		 		justify-content: center;
+   		 		background: transparent;
+   		 		h3 {
+   		 			padding-top: 0;
+   		 			padding-bottom: 20px;
+   		 			width: 100%;
+		    		@include smoothTransition;
+		    		transition-duration: 0.4s !important;
+   		 		}
+   		 		.teaser {
+   		 			padding: 0 85px;
+   		 			position: relative;
+   		 			transform: none;
+   		 			float: none;
+   		 			overflow: visible;
+   		 			max-height: 100%;
+   		 			opacity: 1;
+		    		@include smoothTransition;
+		    		transition-duration: 0.4s !important;
+   		 		}
+	    	}
+	    }
+	}
+	@media(max-width: 991px){
+		.single-issue {
+			width: 100% !important;
+			float: left;
+			margin: 0 0 15px 0;
+		}
+	}
+}

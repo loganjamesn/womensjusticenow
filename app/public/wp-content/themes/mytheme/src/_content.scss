@@ -12,6 +12,7 @@ body {
 	width: 100%;
   overflow-x: hidden;
   margin-top: 110px;
+  font-size: 20px;
   @media(max-width:991px){
     margin-top: 70px;
   }
@@ -43,7 +44,15 @@ h1 {
           z-index: -1;
         }        
       }
+      &.blue {
+        span {
+          &:after {
+            background: $c_blue;
+          }
+        }
+      }
     }
+    margin-bottom: 30px;
   }
   @media(max-width: 991px){
     font-size: 35px;
@@ -78,6 +87,10 @@ h1 {
 .page-wrap {
   width: 100%;
   overflow-x: hidden;
+  min-height: 50vh;
+  &.content-page {
+    padding: 100px 0;
+  }
 }
 
 .container {
@@ -86,6 +99,12 @@ h1 {
     max-width: 100% !important;
     padding-left: 20px;
     padding-right: 20px;   
+  }
+  &.narrow {
+    max-width: 970px;
+  }
+  &.small {
+    max-width: 720px;
   }
 }
 
@@ -98,6 +117,10 @@ h1 {
   color: $c_blue;
   font-family: "Galano Grotesque Alt";
   text-align: center;
+  &.red {
+    border: 3px solid $c_red;
+    color: $c_red;
+  }
   &.solid {
   	background: $c_blue;
   	border: 3px solid transparent;
@@ -143,6 +166,11 @@ h1 {
 #{$all-buttons-hover} {
 	background: $c_blue;
   	color: $c_white;
+    &.red {
+      border: 3px solid $c_red;
+      background: $c_red;
+      color: $c_white;
+    }
   	&.solid {
   		background: shade($c_blue, 10%);
   		&.red {

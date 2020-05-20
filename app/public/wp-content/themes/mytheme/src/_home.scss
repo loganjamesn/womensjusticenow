@@ -1,0 +1,21 @@
+.home {
+    .signup-form {
+        background: $c_dark;
+        padding: 50px;
+        top: -93px;
+        float: right;
+        position: relative;
+        display: inline-block;
+        z-index: 3;
+        max-width: 610px;
+        h4 {
+            color: $c_white;
+        }
+        @media(max-width: 991px){
+            width: 100%;
+            max-width: 100%;
+            top: -20px;
+            padding: 30px 30px 15px;
+        }
+    }
+}

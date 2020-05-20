@@ -23,6 +23,50 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 58px;
+  color: $c_black;
+  &.page-title {
+    &.underline {
+      span {
+        position: relative;
+        &:after {
+          content: '';
+          background: $c_gold;
+          content: '';
+          -ms-transform: skew(-30deg,0);
+          transform: skew(-30deg,0);
+          width: calc(100% + 20px);
+          height: 10px;
+          position: absolute;
+          bottom: 0;
+          left: -10px;
+          padding: 0 1px;
+          z-index: -1;
+        }        
+      }
+    }
+  }
+  @media(max-width: 991px){
+    font-size: 35px;
+    &.page-title {
+      &.underline {
+        span {
+          &:after {
+            height: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: $c_black;
+  background: $c_yellow;
+}
+
+::selection {
+  color: $c_black;
+  background: $c_yellow;
 }
 
 .widget {
@@ -52,6 +96,8 @@ h1 {
   height: 43px;
   line-height: 34px;
   color: $c_blue;
+  font-family: "Galano Grotesque Alt";
+  text-align: center;
   &.solid {
   	background: $c_blue;
   	border: 3px solid transparent;
@@ -66,10 +112,10 @@ h1 {
 	  	color: $c_white;
   	}
   }
-  a {
+  a, span {
   	color: inherit;
-  	display: block;
-    float: left;
+  	display: inline-block;
+    float: none;
     position: relative;
     text-align: center;
     height: 43px;
@@ -78,6 +124,7 @@ h1 {
     font-size: 16px;
     font-family: "Galano Grotesque Alt";
     position: relative;
+    text-align: center;
   	@include smoothTransition;
   	&:before {
   		content: '\f105';
@@ -102,7 +149,7 @@ h1 {
   			background: shade($c_red, 10%);
   		}
   	}
-  	a {
+  	a, span {
   		color: $c_white;
   		text-decoration: none;
   		@include smoothTransition;
@@ -117,8 +164,8 @@ h1 {
 
 // Toppers 
 .topper {
-  // max-height: calc(100vh - 200px);
   height: 100%;
+  max-height: calc(100vh - 170px);
   min-height: 600px;
   width: 100%;
   padding: 0 20px;
@@ -161,7 +208,7 @@ h1 {
         right: 0;
         bottom: 0;
         left: 0;
-        opacity: 0.6;
+        opacity: 0.75;
       }
     }
   }
@@ -175,31 +222,43 @@ h1 {
     .text-overlay {
       height: 100%;
       display: block;
+      width: 100%;
+      position: relative;
       .page-title {
         position: absolute;
         bottom: 80px;
         left: 0;
+        max-width: 500px;
+        width: 100%;
         span {
           color: $c_white;
           position: relative;
           z-index: 2;
-          &:after {
-            content: '';
-            background: $c_gold;
-            content: '';
-            -ms-transform: skew(-30deg,0);
-            transform: skew(-30deg,0);
-            width: calc(100% + 20px);
-            height: 10px;
-            position: absolute;
-            bottom: 0;
-            left: -10px;
-            padding: 0 1px;
-            z-index: -1;
-          }
         }
       }
     }    
+  }
+
+  @media(max-width: 991px){
+    min-height: 400px;
+
+    .bottom-gradient {
+      background: linear-gradient(to bottom,transparent 0,rgba(9,10,11,0) 40%,$c_dark 100%) !important;
+      opacity: 1 !important;
+    }
+    .container {
+      padding: 0 30px !important;
+      .text-overlay {
+        .page-title {
+          bottom: 30px;
+          max-width: 320px;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 767px){
+    min-height: 350px
   }
 }
 

@@ -9,6 +9,8 @@ function scripts()
 	wp_enqueue_script('jquery');
 	wp_register_script('app', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
 	wp_enqueue_script('app');
+	wp_register_script('lettering', get_template_directory_uri() . '/src/lettering.min.js', ['jquery'], 1, true);
+	wp_enqueue_script('lettering');
 }
 add_action('wp_enqueue_scripts', 'scripts');
 

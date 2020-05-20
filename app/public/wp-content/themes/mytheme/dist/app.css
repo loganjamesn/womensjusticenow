@@ -12348,6 +12348,42 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 58px;
+  color: #121416;
+}
+h1.page-title.underline span {
+  position: relative;
+}
+h1.page-title.underline span:after {
+  content: "";
+  background: #edcf6e;
+  content: "";
+  transform: skew(-30deg, 0);
+  width: calc(100% + 20px);
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  padding: 0 1px;
+  z-index: -1;
+}
+@media (max-width: 991px) {
+  h1 {
+    font-size: 35px;
+  }
+  h1.page-title.underline span:after {
+    height: 7px;
+  }
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #121416;
+  background: #f2e9bf;
+}
+
+::selection {
+  color: #121416;
+  background: #f2e9bf;
 }
 
 .widget {
@@ -12378,6 +12414,8 @@ button, [type=button], [type=reset], [type=submit] {
   height: 43px;
   line-height: 34px;
   color: #485eae;
+  font-family: "Galano Grotesque Alt";
+  text-align: center;
 }
 button.solid, [type=button].solid, [type=reset].solid, [type=submit].solid {
   background: #485eae;
@@ -12393,10 +12431,10 @@ button.solid.red, [type=button].solid.red, [type=reset].solid.red, [type=submit]
   border: 3px solid transparent;
   color: #fff;
 }
-button a, [type=button] a, [type=reset] a, [type=submit] a {
+button a, button span, [type=button] a, [type=button] span, [type=reset] a, [type=reset] span, [type=submit] a, [type=submit] span {
   color: inherit;
-  display: block;
-  float: left;
+  display: inline-block;
+  float: none;
   position: relative;
   text-align: center;
   height: 43px;
@@ -12405,10 +12443,11 @@ button a, [type=button] a, [type=reset] a, [type=submit] a {
   font-size: 16px;
   font-family: "Galano Grotesque Alt";
   position: relative;
+  text-align: center;
   transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
   transition-delay: 0s !important;
 }
-button a:before, [type=button] a:before, [type=reset] a:before, [type=submit] a:before {
+button a:before, button span:before, [type=button] a:before, [type=button] span:before, [type=reset] a:before, [type=reset] span:before, [type=submit] a:before, [type=submit] span:before {
   content: "\F105";
   color: inherit;
   font-size: 16px;
@@ -12432,13 +12471,13 @@ button:hover.solid, [type=button]:hover.solid, [type=reset]:hover.solid, [type=s
 button:hover.solid.red, [type=button]:hover.solid.red, [type=reset]:hover.solid.red, [type=submit]:hover.solid.red {
   background: #8c304d;
 }
-button:hover a, [type=button]:hover a, [type=reset]:hover a, [type=submit]:hover a {
+button:hover a, button:hover span, [type=button]:hover a, [type=button]:hover span, [type=reset]:hover a, [type=reset]:hover span, [type=submit]:hover a, [type=submit]:hover span {
   color: #fff;
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
   transition-delay: 0s !important;
 }
-button:hover a:before, [type=button]:hover a:before, [type=reset]:hover a:before, [type=submit]:hover a:before {
+button:hover a:before, button:hover span:before, [type=button]:hover a:before, [type=button]:hover span:before, [type=reset]:hover a:before, [type=reset]:hover span:before, [type=submit]:hover a:before, [type=submit]:hover span:before {
   color: #fff;
   left: -10px;
   transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
@@ -12447,6 +12486,7 @@ button:hover a:before, [type=button]:hover a:before, [type=reset]:hover a:before
 
 .topper {
   height: 100%;
+  max-height: calc(100vh - 170px);
   min-height: 600px;
   width: 100%;
   padding: 0 20px;
@@ -12492,7 +12532,7 @@ button:hover a:before, [type=button]:hover a:before, [type=reset]:hover a:before
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 .topper .container {
   position: relative;
@@ -12504,29 +12544,41 @@ button:hover a:before, [type=button]:hover a:before, [type=reset]:hover a:before
 .topper .container .text-overlay {
   height: 100%;
   display: block;
+  width: 100%;
+  position: relative;
 }
 .topper .container .text-overlay .page-title {
   position: absolute;
   bottom: 80px;
   left: 0;
+  max-width: 500px;
+  width: 100%;
 }
 .topper .container .text-overlay .page-title span {
   color: #fff;
   position: relative;
   z-index: 2;
 }
-.topper .container .text-overlay .page-title span:after {
-  content: "";
-  background: #edcf6e;
-  content: "";
-  transform: skew(-30deg, 0);
-  width: calc(100% + 20px);
-  height: 10px;
-  position: absolute;
-  bottom: 0;
-  left: -10px;
-  padding: 0 1px;
-  z-index: -1;
+@media (max-width: 991px) {
+  .topper {
+    min-height: 400px;
+  }
+  .topper .bottom-gradient {
+    background: linear-gradient(to bottom, transparent 0, rgba(9, 10, 11, 0) 40%, #1c212f 100%) !important;
+    opacity: 1 !important;
+  }
+  .topper .container {
+    padding: 0 30px !important;
+  }
+  .topper .container .text-overlay .page-title {
+    bottom: 30px;
+    max-width: 320px;
+  }
+}
+@media (max-width: 767px) {
+  .topper {
+    min-height: 350px;
+  }
 }
 
 .nav__posts .prev-link,
@@ -12545,4 +12597,68 @@ button:hover a:before, [type=button]:hover a:before, [type=reset]:hover a:before
   left: 0;
   top: 0;
   z-index: 99;
+}
+
+form {
+  margin-top: 15px;
+}
+form .form-group input {
+  background: #fff;
+  height: 45px !important;
+  padding: 10px 20px !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  border: none !important;
+  color: #121416 !important;
+  font-size: 18px !important;
+  font-family: "Roboto Slab", sans-serif !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  width: 100%;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
+  transition-delay: 0s !important;
+}
+form .form-group input::-webkit-input-placeholder {
+  color: #bbb;
+}
+form .form-group input::-moz-placeholder {
+  color: #bbb;
+}
+form .form-group input:-ms-input-placeholder {
+  color: #bbb;
+}
+form .form-group input::-ms-input-placeholder {
+  color: #bbb;
+}
+form .form-group input::placeholder {
+  color: #bbb;
+}
+form .form-group button {
+  width: 100%;
+  height: 45px !important;
+}
+form .form-group button span {
+  line-height: 39px;
+}
+
+.home .signup-form {
+  background: #1c212f;
+  padding: 50px;
+  top: -93px;
+  float: right;
+  position: relative;
+  display: inline-block;
+  z-index: 3;
+  max-width: 610px;
+}
+.home .signup-form h4 {
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .home .signup-form {
+    width: 100%;
+    max-width: 100%;
+    top: -20px;
+    padding: 30px 30px 15px;
+  }
 }

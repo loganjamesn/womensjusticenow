@@ -102,6 +102,10 @@ jQuery(window).on('scroll resize', function () {
 jQuery('.menu-toggle').click(function () {
   jQuery('body').toggleClass('menu-opened');
   jQuery(this).toggleClass('open');
+}); // Split H1 words into spans
+
+jQuery(document).ready(function () {
+  jQuery(".split-words").lettering('words');
 });
 
 /***/ }),

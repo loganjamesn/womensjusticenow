@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Document</title>
 
 	<?php wp_head();?>
 
 </head>
-<body class="test test2 test3">
+
+<body>
 
 <header>
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'mobile-menu',
-				'menu_class' => 'mobile-menu'
-			)
-		);
-		?>		
-
 	<div class="container">
 		<a class="logo-container" href="/">
 			<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 356 354" xml:space="preserve">
@@ -79,22 +73,32 @@
 		</a>
 		<div class="desktop-nav">
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'top-menu',
-					'menu_class' => 'top-bar'
-				)
-			);
+				wp_nav_menu(
+					array(
+						'theme_location' => 'top-menu',
+						'menu_class' => 'top-bar'
+					)
+				);
 			?>		
 			<div id="btn-search" class="search-icon">
 				<i class="fa fa-search" aria-hidden="true"></i>
 			</div>	
-			<div class="action-buttons">
-            	<button class="outline blue"><a target="_blank" href="https://actionnetwork.org/fundraising/donate-to-wjn/">Donate</a></button>
-            	<button class="solid red"><a href="/get-help/">Get Help</a></button>
-            </div>		
+			<?php get_template_part('includes/section', 'actionbuttons');?>
 		</div>
 		<div class="mobile-nav">
+			<div class="menu-overlay">
+				<div class="mobile-links">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'mobile-menu',
+								'menu_class' => 'mobile-menu'
+							)
+						);
+					?>						
+				</div>
+				<?php get_template_part('includes/section', 'actionbuttons');?>
+			</div>
 			<div class="hamburger-menu">
 				<div class="menu-toggle">
 					<span class="hamburger-box">

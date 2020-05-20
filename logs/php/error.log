@@ -86,3 +86,39 @@ Stack trace:
 #2 /Users/ppwd/projects/womensjusticenow/app/public/index.php(17): require('/Users/ppwd/pro...')
 #3 {main}
   thrown in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/page.php on line 14
+[20-May-2020 06:10:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_actionbuttons() in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/header.php:85
+Stack trace:
+#0 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template.php(723): require_once()
+#1 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template.php(672): load_template('/Users/ppwd/pro...', true)
+#2 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/front-page.php(1): get_header()
+#4 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template-loader.php(106): include('/Users/ppwd/pro...')
+#5 /Users/ppwd/projects/womensjusticenow/app/public/wp-blog-header.php(19): require_once('/Users/ppwd/pro...')
+#6 /Users/ppwd/projects/womensjusticenow/app/public/index.php(17): require('/Users/ppwd/pro...')
+#7 {main}
+  thrown in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/header.php on line 85
+[20-May-2020 06:10:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_actionbuttons() in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/header.php:85
+Stack trace:
+#0 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template.php(723): require_once()
+#1 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template.php(672): load_template('/Users/ppwd/pro...', true)
+#2 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/front-page.php(1): get_header()
+#4 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template-loader.php(106): include('/Users/ppwd/pro...')
+#5 /Users/ppwd/projects/womensjusticenow/app/public/wp-blog-header.php(19): require_once('/Users/ppwd/pro...')
+#6 /Users/ppwd/projects/womensjusticenow/app/public/index.php(17): require('/Users/ppwd/pro...')
+#7 {main}
+  thrown in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/header.php on line 85
+[20-May-2020 08:50:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function has_page_thumbnail() in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/front-page.php:8
+Stack trace:
+#0 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/ppwd/projects/womensjusticenow/app/public/wp-blog-header.php(19): require_once('/Users/ppwd/pro...')
+#2 /Users/ppwd/projects/womensjusticenow/app/public/index.php(17): require('/Users/ppwd/pro...')
+#3 {main}
+  thrown in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/front-page.php on line 8
+[20-May-2020 08:50:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function has_page_thumbnail() in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/front-page.php:8
+Stack trace:
+#0 /Users/ppwd/projects/womensjusticenow/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/ppwd/projects/womensjusticenow/app/public/wp-blog-header.php(19): require_once('/Users/ppwd/pro...')
+#2 /Users/ppwd/projects/womensjusticenow/app/public/index.php(17): require('/Users/ppwd/pro...')
+#3 {main}
+  thrown in /Users/ppwd/projects/womensjusticenow/app/public/wp-content/themes/mytheme/front-page.php on line 8

@@ -17,12 +17,12 @@
 
 	<?php get_template_part('includes/section', 'signupform');?>
 	
-	<div class="welcome-content">
+	<div class="welcome-text">
 		<div class="container narrow">
 			<div class="welcome-heading">
 				<h1 class="page-title split-words underline blue"><?php the_field('subheading');?></h1>	
 			</div>
-			<div class="welcome-text">
+			<div class="text">
 				<div class="row">
 					<div class="col-md-5">
 						<button class="red"><a href="/issues/">Our Issues</a></button>
@@ -37,7 +37,7 @@
 	<div class="issues">
 		<?php get_template_part('includes/section', 'issues');?>	
 	</div>
-	<div class="block-quote gray-bg">
+	<div class="module full-width-color pink">
 		<div class="container small">
 			<button class="yellow solid"><a href="/issues/">Our Issues</a></button>
 			<h2><?php the_field('block_quote');?></h2>			

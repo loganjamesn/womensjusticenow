@@ -1,0 +1,31 @@
+.welcome-text {
+    width: 100%;
+    display: block;
+    float: left;
+    h1 {
+        max-width: 575px;
+        float: left;
+    }
+    .text {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        float: left;
+        width: 100%;
+    }
+
+    @media(max-width: 991px){
+	    margin-top: 30px;
+	    .text {
+	        margin-top: 45px;
+	        margin-bottom: 0;
+	        text-align: center;
+	        button {
+	            margin-bottom: 45px;
+	            display: inline-block;
+	        }
+	        p {
+	            text-align: left;
+	        }
+	    }
+	}
+}

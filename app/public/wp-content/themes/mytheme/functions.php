@@ -106,7 +106,58 @@ function platform_taxonomy()
 add_action('init', 'platform_taxonomy');
 
 
+// ACF Custom Blocks
+if (function_exists('acf_register_block_type')) {
+	add_action('acf/init', 'register_acf_block_types');
+}
 
+function register_acf_block_types() {
+	
+	// Welcome Text Module
+	acf_register_block_type(array(
+		'name' => 'module-welcome-text',
+		'title' => __('Module - Welcome Text'),
+		'description' => __('Displays content in a staggered layout.'),
+		'render_template' => 'includes/blocks/welcome-text.php',
+		'icon' => 'layout',
+		'category' => 'layout',
+		'keywords' => array('module', 'welcome', 'text'),
+	));
+
+	// Issues Grid Module
+	acf_register_block_type(array(
+		'name' => 'module-issues-grid',
+		'title' => __('Module - Issues Grid'),
+		'description' => __('Displays the issue pages in a grid.'),
+		'render_template' => 'includes/blocks/issues-grid.php',
+		'icon' => 'layout',
+		'category' => 'layout',
+		'keywords' => array('module', 'issue', 'grid'),
+	));
+	
+	// Full Width Color Module
+	acf_register_block_type(array(
+		'name' => 'module-full-width-color',
+		'title' => __('Module - Full Width Color'),
+		'description' => __('Full width content block with a colored background.'),
+		'render_template' => 'includes/blocks/full-width-color.php',
+		'icon' => 'format-aside',
+		'category' => 'layout',
+		'keywords' => array('module', 'full', 'width', 'color', 'content'),
+	));
+	
+	// Actions Grid Module
+	acf_register_block_type(array(
+		'name' => 'module-actions-grid',
+		'title' => __('Module - Action Grid'),
+		'description' => __('Displays calls to action in a grid.'),
+		'render_template' => 'includes/blocks/actions-grid.php',
+		'icon' => 'layout',
+		'category' => 'layout',
+		'keywords' => array('module', 'action', 'grid'),
+	));
+
+}
 
 
 

@@ -18,30 +18,12 @@
             padding: 30px 30px 15px;
         }
     }
-    .welcome-content {
-        width: 100%;
-        display: block;
-        float: left;
-        h1 {
-            max-width: 575px;
-            float: left;
-        }
-        .welcome-text {
-            margin-top: 60px;
-            margin-bottom: 60px;
-            float: left;
-            width: 100%;
-        }
-    }
-    .block-quote {
-        width: 100%;
+    .full-width-color {
         padding: 320px 0 120px;
         text-align: center;
         z-index: -1;
         margin-top: -280px;
-        background: $c_pink;
-        display: block;
-        float: left;
+        
         button {
             display: inline-block;
             margin-bottom: 60px;
@@ -54,22 +36,7 @@
         }
     }
     @media(max-width: 991px){
-        .welcome-content {
-            margin-top: 30px;
-            .welcome-text {
-                margin-top: 45px;
-                margin-bottom: 0;
-                text-align: center;
-                button {
-                    margin-bottom: 45px;
-                    display: inline-block;
-                }
-                p {
-                    text-align: left;
-                }
-            }
-        }
-        .block-quote {
+        .full-width-color {
             padding: 280px 0 80px;
         }
     }

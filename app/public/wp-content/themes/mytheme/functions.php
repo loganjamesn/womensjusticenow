@@ -146,6 +146,17 @@ function register_acf_block_types() {
 		'keywords' => array('module', 'full', 'width', 'color', 'content'),
 	));
 	
+	// Call to Action Form Module
+	acf_register_block_type(array(
+		'name' => 'module-cta-form',
+		'title' => __('Module - Call to Action Form'),
+		'description' => __('Full width call to action with image and form.'),
+		'render_template' => 'includes/blocks/cta-form.php',
+		'icon' => 'align-left',
+		'category' => 'layout',
+		'keywords' => array('module', 'cta', 'form', 'call to action'),
+	));
+	
 	// Actions Grid Module
 	acf_register_block_type(array(
 		'name' => 'module-actions-grid',

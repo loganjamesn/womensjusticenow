@@ -25,6 +25,7 @@
 	    .row {
 	    	margin: 0 auto;
 	    	max-width: 750px;
+	    	height: 710px;
 	    	display: block;
 	    	text-align: center;
 	    	.vertical-centered {
@@ -118,7 +119,7 @@
 			min-height: auto !important;
 		}
 		.container {
-			padding: 50px 20px 0;
+			padding: 50px 20px;
 			width: 100%;
 			max-width: 100%;
 			.row .vertical-centered {
@@ -128,6 +129,7 @@
 		}
 	}
 	@media(max-width: 767px){
+		border-bottom: 0 !important;
 		.cta-image {
 			min-height: 350px;
 			width: 100%;

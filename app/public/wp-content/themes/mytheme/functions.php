@@ -157,6 +157,17 @@ function register_acf_block_types() {
 		'keywords' => array('module', 'cta', 'form', 'call to action'),
 	));
 	
+	// Latest News Feed Module
+	acf_register_block_type(array(
+		'name' => 'module-latest-news-feed',
+		'title' => __('Module - Latest News Feed'),
+		'description' => __('Displays a grid of latest news posts.'),
+		'render_template' => 'includes/blocks/latest-news-feed.php',
+		'icon' => 'align-left',
+		'category' => 'grid-view',
+		'keywords' => array('module', 'latest', 'news', 'posts', 'feed'),
+	));
+	
 	// Actions Grid Module
 	acf_register_block_type(array(
 		'name' => 'module-actions-grid',

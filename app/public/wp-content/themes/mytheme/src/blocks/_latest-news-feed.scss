@@ -25,6 +25,7 @@
 			height: 100%;
 			min-height: 530px;
 			padding: 100px 70px;
+			box-shadow: 10.6px 10.6px 20px 0 rgba(0,0,0,0);
 			@include smoothTransition;
 		    transition-duration: 0.5s !important;
 			a {
@@ -98,6 +99,7 @@
 			}
 			&:hover {
 				background: $c_gold;
+				box-shadow: 10.6px 10.6px 20px 0 rgba(0,0,0,0.3);
 				a {
 					opacity: 0;
 				}

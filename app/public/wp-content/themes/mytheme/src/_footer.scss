@@ -104,9 +104,11 @@ footer {
 				}
 			}	
 		}
+	}
 
-
-		@media(max-width: 991px){
+	@media(max-width: 991px){
+		padding: 60px 15px 100px;
+		.container {
 			.footer-links {
 				ul {
 					li {
@@ -115,8 +117,10 @@ footer {
 				}
 			}
 		}
+	}
 
-		@media(max-width: 767px){
+	@media(max-width: 767px){
+		.container {
 			.footer-links {
 				ul {
 					li {
@@ -128,7 +132,7 @@ footer {
 				svg {
 					width: 100px !important;
 				}
-			}
+			}			
 		}
 	}
 }

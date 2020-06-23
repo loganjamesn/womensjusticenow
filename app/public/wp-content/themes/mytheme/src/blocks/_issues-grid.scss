@@ -13,7 +13,7 @@
 	    margin: 0 6px 6px;
 	    max-width: 100%;
 	    border-radius: 0;
-	    box-shadow: 4px 4px 4px rgba(0,0,0,0);
+	    box-shadow: 10.6px 10.6px 20px 0 rgba(0,0,0,0);
 	    position: relative;
 	    overflow: hidden;
 	    text-align: left;
@@ -66,7 +66,7 @@
 		    text-align: left;
 		    h3 {
 		    	max-width: 100%;
-    			padding: 35px 85px 35px 85px;
+    			padding: 35px 85px;
     			color: $c_white;
     			width:100%;
     			font-size: 22px;
@@ -117,47 +117,56 @@
 		    z-index: 99;
 		    fill: #fff;
 	    }
-	    &:hover {
-	    	transform: scale(1.05);
-	    	z-index: 999;
-	    	box-shadow: 4px 4px 24px rgba(0,0,0,.08);
-	    	.overlay {
-	    		opacity: 1 !important;
-	    	}
-	    	.wrapper {
-			    height: 100%;
-			    flex-direction: column;
-   		 		justify-content: center;
-   		 		background: transparent;
-   		 		h3 {
-   		 			padding-top: 0;
-   		 			padding-bottom: 20px;
-   		 			width: 100%;
-		    		@include smoothTransition;
-		    		transition-duration: 0.5s !important;
-   		 		}
-   		 		.teaser {
-   		 			padding: 0 85px;
-   		 			position: relative;
-   		 			transform: none;
-   		 			float: none;
-   		 			overflow: visible;
-   		 			max-height: 100%;
-   		 			opacity: 1;
-		    		@include smoothTransition;
-		    		transition-duration: 0.5s !important;
-   		 		}
-   		 		.learn-more {
-   		 			display: block;
-   		 		}
-	    	}
-	    }
+		@media(min-width: 992px){
+		    &:hover {
+		    	transform: scale(1.05);
+		    	z-index: 999;
+		    	box-shadow: 10.6px 10.6px 20px 0 rgba(0,0,0,0.3);
+		    	.overlay {
+		    		opacity: 1 !important;
+		    	}
+		    	.wrapper {
+				    height: 100%;
+				    flex-direction: column;
+	   		 		justify-content: center;
+	   		 		background: transparent;
+	   		 		h3 {
+	   		 			padding-top: 0;
+	   		 			padding-bottom: 20px;
+	   		 			width: 100%;
+			    		@include smoothTransition;
+			    		transition-duration: 0.5s !important;
+	   		 		}
+	   		 		.teaser {
+	   		 			padding: 0 85px;
+	   		 			position: relative;
+	   		 			transform: none;
+	   		 			float: none;
+	   		 			overflow: visible;
+	   		 			max-height: 100%;
+	   		 			opacity: 1;
+			    		@include smoothTransition;
+			    		transition-duration: 0.5s !important;
+	   		 		}
+	   		 		.learn-more {
+	   		 			display: block;
+	   		 		}
+		    	}
+		    }
+		}
 	}
 	@media(max-width: 991px){
 		.single-issue {
 			width: 100% !important;
 			float: left;
 			margin: 0 0 15px 0;
+			.wrapper {
+				min-height: 80px;
+			}
+			h3 {
+				margin: 0;
+    			padding: 35px !important;
+			}
 		}
 	}
 }

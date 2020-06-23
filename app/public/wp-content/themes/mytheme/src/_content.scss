@@ -26,6 +26,8 @@ h1 {
   font-size: 58px;
   color: $c_black;
   &.page-title {
+    position: relative;
+    z-index: 1;
     &.underline {
       span {
         position: relative;
@@ -38,7 +40,7 @@ h1 {
           width: calc(100% + 20px);
           height: 10px;
           position: absolute;
-          bottom: 0;
+          bottom: 5px;
           left: -10px;
           padding: 0 1px;
           z-index: -1;
@@ -51,6 +53,13 @@ h1 {
           }
         }
       }
+      &.red {
+        span {
+          &:after {
+            background: $c_red;
+          }
+        }
+      }
     }
     margin-bottom: 30px;
   }
@@ -60,6 +69,7 @@ h1 {
       &.underline {
         span {
           &:after {
+            bottom: 2px;
             height: 7px;
           }
         }
@@ -120,10 +130,15 @@ h1 {
   font-family: "Galano Grotesque Alt" !important;
   text-align: center !important;
   text-transform: none !important;
+  box-shadow: 4px 4px 4px rgba(0,0,0,.08);
   @include smoothTransition;
   &.red {
     border: 3px solid $c_red !important;
     color: $c_red !important;
+  }
+  &.gold {
+    border: 3px solid $c_gold !important;
+    color: $c_black !important;
   }
   &.solid {
   	background: $c_blue !important;
@@ -138,6 +153,14 @@ h1 {
 	  	border: 3px solid transparent !important;
 	  	color: $c_white !important;
   	}
+    &.gold {
+      background: $c_gold !important;
+      border: 3px solid transparent !important;
+      color: $c_black !important;
+      a, span {
+        color: $c_black !important;
+      }
+    }
   }
   a, span {
   	color: inherit !important;
@@ -168,29 +191,41 @@ h1 {
 }
 #{$all-buttons-hover},
 #can_embed_form #can_embed_form_inner input[type=submit]:hover {
-	background: $c_blue !important;
-  	color: $c_white !important;
-    &.red {
-      border: 3px solid $c_red !important;
-      background: $c_red !important;
-      color: $c_white !important;
+  background: $c_blue !important;
+	color: $c_white !important;
+  &.red {
+    border: 3px solid $c_red !important;
+    background: $c_red !important;
+    color: $c_white !important;
+  }
+	&.solid {
+		background: shade($c_blue, 10%) !important;
+		&.red {
+			background: shade($c_red, 10%) !important;
+		}
+    &.gold {
+      background: shade($c_gold, 2%) !important;
+      border: 3px solid transparent !important;
     }
-  	&.solid {
-  		background: shade($c_blue, 10%) !important;
-  		&.red {
-  			background: shade($c_red, 10%) !important;
-  		}
-  	}
-  	a, span {
-  		color: $c_white !important;
-  		text-decoration: none !important;
-  		@include smoothTransition;
-  		&:before {
-  			color: $c_white !important;
-  			left: -10px !important;
-  			@include smoothTransition;
-  		}
-  	}
+	}
+	a, span {
+		color: $c_white !important;
+		text-decoration: none !important;
+		@include smoothTransition;
+		&:before {
+			color: $c_white !important;
+			left: -10px !important;
+			@include smoothTransition;
+		}
+	}
+  &.gold {
+    border: 3px solid $c_gold !important;
+    background: $c_gold !important;
+    color: $c_black !important;
+    a, a:before, span {
+      color: $c_black !important;
+    }
+  }
 } 
 
 

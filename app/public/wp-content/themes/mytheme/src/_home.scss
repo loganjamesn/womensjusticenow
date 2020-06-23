@@ -37,7 +37,10 @@
     }
     @media(max-width: 991px){
         .full-width-color {
-            padding: 280px 0 80px;
+            button {
+                margin-bottom: 45px;
+            }
+            padding: 280px 15px 60px;
         }
     }
 }

@@ -1,0 +1,94 @@
+.bottom-cta {
+	width: 100%;
+	float: left;
+	padding: 120px 0;
+	background: $c_pale;
+	.intro-block {
+		max-width: 450px;
+		margin-bottom: 75px;
+	}
+	.action-grid {
+		display: flex;
+		justify-content: normal;
+		.single-action {
+			display: flex;
+			flex-direction: column;
+			float: none;
+			height: auto;
+			.icon {
+				margin-bottom: 20px;
+				svg {
+					height: 75px;
+					width: 75px;
+					&.sign-up {
+						path {fill: $c_red;}
+						rect {fill: $c_pink;}
+					}
+					&.donate {
+						path, rect {fill: $c_gold;}
+					}
+					&.get-involved {
+						path {fill: $c_blue;}
+						.cls-2 {fill: $c_lightblue;}
+					}
+				}
+			}
+			h2 {
+				text-transform: uppercase;
+				margin-bottom: 30px;
+				font-size: 26px;
+			}
+			p {
+				font-size: 16px;
+				flex: 1 1 auto;
+			}
+			button {
+				margin-top: 30px;
+				position: relative;
+				width: 100%;
+			}
+			.line {
+				display: block;
+				width: 100%;
+				float: left;
+				margin-top: 50px;
+				border-bottom: 3px solid $c_black;
+			}
+		}
+	}
+	@media(min-width: 768px) and (max-width: 991px){
+		text-align: center;
+		.intro-block {
+			display: inline-block;
+			float: none;
+			margin-bottom: 45px;
+		}
+		.action-grid {
+			text-align: left;
+		}
+	}
+	@media(max-width: 767px){
+		padding: 60px 0;
+		.intro-block {
+			padding: 0 15px;
+			margin-bottom: 45px;
+		}	
+		.action-grid {
+			.single-action {
+				text-align: center;
+				p {
+					padding: 0 15px;
+				}
+				.line {
+					margin-top: 30px;
+				}
+				&:last-child {
+					.line {display: none;}
+				}
+			}
+			.single-action + .single-action {
+				margin-top: 30px;
+			}
+		}
+	}
+}

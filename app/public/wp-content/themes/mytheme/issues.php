@@ -21,4 +21,6 @@ Template Name: Issues
 	</div>
 </main>
 
+<?php get_template_part('includes/section', 'bottom-cta');?>
+
 <?php get_footer();?>

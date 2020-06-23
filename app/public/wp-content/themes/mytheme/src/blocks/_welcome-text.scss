@@ -2,25 +2,27 @@
     width: 100%;
     display: block;
     float: left;
+    margin-top: -60px;
     h1 {
         max-width: 575px;
         float: left;
     }
     .text {
         margin-top: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 120px;
         float: left;
         width: 100%;
     }
 
     @media(max-width: 991px){
 	    margin-top: 30px;
+	    margin-bottom: 45px;
+	    padding: 0 15px;
 	    .text {
-	        margin-top: 45px;
+	        margin-top: 20px;
 	        margin-bottom: 0;
-	        text-align: center;
 	        button {
-	            margin-bottom: 45px;
+	            margin-bottom: 20px;
 	            display: inline-block;
 	        }
 	        p {

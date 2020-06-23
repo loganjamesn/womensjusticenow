@@ -1,0 +1,60 @@
+.topper-issues {
+	padding: 120px 0 100px;
+	width: 100%;
+	float: left;
+	h5 {
+		margin-bottom: 40px;
+		color: $c_pink;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding-left: 35px;
+		position: relative;
+		&:before {
+			content: '';
+			width: 35px;
+		    height: 4px;
+		    position: absolute;
+		    left: -10px;
+		    top: 6px;
+		    background: $c_pink;
+		}
+	}
+	.left-right-split {
+		display: flex;
+		.content-left {
+			width: 45%;
+			margin-right: 60px;
+			float: left;
+		}
+		.content-right {
+			display: flex;
+			align-items: flex-end;
+			margin-top: 15px;
+			width: 40%;
+			float: left;
+		}
+	}
+
+  @media(max-width: 991px){
+    padding: 120px 45px 80px;
+	.left-right-split {
+		.content-right {
+			p {
+				font-size: 18px;
+			}
+		}
+	}
+  }
+  @media(max-width: 767px){
+  	padding: 60px 15px;
+  	.left-right-split {
+		display: table;
+  		.content-left,
+  		.content-right {
+  			margin-right: 0;
+  			width: 100%;
+  		}
+  	}
+  }
+}

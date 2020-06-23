@@ -1,11 +1,21 @@
 <?php get_header();?>
 
-<section class="page-wrap content-page">
-	<div class="container small">
-		<h1 class="page-title split-words underline yellow"><?php the_title();?></h1>
-		<small><?php the_field('subheader_text');?></small>
-		<?php get_template_part('includes/section', 'content');?>
+<main>
+
+	<div class="topper-issues">
+		<div class="container narrow">
+			<h1 class="page-title split-words underline blue"><?php the_title();?></h1>
+		</div>
 	</div>
-</section>
+	
+	<div class="page-wrap">
+		<div class="container narrow">
+			<?php get_template_part('includes/section', 'content');?>
+		</div>
+	</div>
+	
+	<?php get_template_part('includes/section', 'bottom-cta');?>	
+
+</main>
 
 <?php get_footer();?>

@@ -6,21 +6,30 @@ Template Name: Issues
 
 <?php get_header();?>
 
-<main class="page-wrap content-page">
-	<div class="content">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-10">
-					<h1 class="page-title split-words underline yellow"><?php the_title();?></h1>
+<main>
+
+	<div class="topper-issues">
+		<div class="container narrow">
+			<div class="left-right-split">
+				<div class="content-left">
+					<h5><?php the_field('small_title');?></h5>
+					<h1 class="page-title split-words underline blue"><?php the_field('title');?></h1>
+				</div>
+				<div class="content-right">
+					<div class="description">
+						<p><?php the_field('description');?></p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="content-section">
-			<?php get_template_part('includes/section', 'content');?>
-		</div>
 	</div>
-</main>
+	
+	<div class="page-wrap">
+		<?php get_template_part('includes/section', 'content');?>
+	</div>
+	
+	<?php get_template_part('includes/section', 'bottom-cta');?>	
 
-<?php get_template_part('includes/section', 'bottom-cta');?>
+</main>
 
 <?php get_footer();?>

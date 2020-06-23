@@ -1,7 +1,7 @@
 <div class="bottom-cta">
 	<div class="container narrow">
 		<div class="intro-block">
-			<h1 class="page-title split-words underline red">Connect</h1>
+			<h1 class="page-title split-words underline blue">Connect</h1>
 			<h4>Here are a few of the ways you can get involved and improve women's lives with us.</h4>
 		</div>
 		<div class="row action-grid mx-lg-n5">
@@ -11,7 +11,7 @@
 				</div>
 				<h2>Sign Up</h2>
 				<p>Get the latest on issues, events, and more.</p>
-				<button class="solid red"><a href="https://actionnetwork.org/forms/sign-up-for-updates-from-womens-justice-now" target="_blank">Join Us</a></button>
+				<button class="solid"><a href="https://actionnetwork.org/forms/sign-up-for-updates-from-womens-justice-now" target="_blank">Join Us</a></button>
 				<span class="line"></span>
 			</div>
 			<div class="col-md-4 px-lg-5 single-action donate">
@@ -29,7 +29,7 @@
 				</div>
 				<h2>Get Involved</h2>
 				<p>Join our on-the-ground advocacy.</p>
-				<button class="solid"><a href="/get-involved/">Learn More</a></button>
+				<button class="solid red"><a href="/get-involved/">Learn More</a></button>
 				<span class="line"></span>
 			</div>
 		</div>

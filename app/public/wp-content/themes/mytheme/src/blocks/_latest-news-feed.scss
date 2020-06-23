@@ -98,7 +98,7 @@
 			    transition-duration: 0.5s !important;
 			}
 			&:hover {
-				background: $c_gold;
+				background: $c_blue;
 				box-shadow: 10.6px 10.6px 20px 0 rgba(0,0,0,0.3);
 				a {
 					opacity: 0;
@@ -108,7 +108,7 @@
 				.above-headline .separator,
 				.read-more,
 				p, h2 {
-					color: $c_black !important;
+					color: $c_white !important;
 				}
 			}
 		}

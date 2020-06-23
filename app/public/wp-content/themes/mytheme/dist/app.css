@@ -12395,12 +12395,12 @@ h1.page-title.underline.red span:after {
 ::-moz-selection {
   /* Code for Firefox */
   color: #121416;
-  background: #f2e9bf;
+  background: #ffecdb;
 }
 
 ::selection {
   color: #121416;
-  background: #f2e9bf;
+  background: #ffecdb;
 }
 
 .widget {
@@ -12816,6 +12816,7 @@ button:hover.gold a, button:hover.gold a:before, button:hover.gold span, [type=b
   line-height: 150%;
   max-height: 0;
   overflow: hidden;
+  font-size: 16px;
   color: #fff;
   transition: all 0s !important;
 }
@@ -12878,6 +12879,7 @@ button:hover.gold a, button:hover.gold a:before, button:hover.gold span, [type=b
     overflow: visible;
     max-height: 100%;
     opacity: 1;
+    font-size: 16px;
     transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1) !important;
     transition-delay: 0s !important;
     transition-duration: 0.5s !important;
@@ -12916,7 +12918,10 @@ button:hover.gold a, button:hover.gold a:before, button:hover.gold span, [type=b
   color: #fff !important;
 }
 .full-width-color.yellow {
-  background: #f2e9bf;
+  background: #ffecdb;
+}
+.full-width-color.yellow h1, .full-width-color.yellow h2, .full-width-color.yellow h3, .full-width-color.yellow h4, .full-width-color.yellow h5 {
+  color: #9b3555 !important;
 }
 .full-width-color.red {
   background: #9b3555;
@@ -12929,7 +12934,7 @@ button:hover.gold a, button:hover.gold a:before, button:hover.gold span, [type=b
   background: #fc9690;
 }
 .full-width-color.gray {
-  background: #bbb;
+  background: #f1f1f1;
 }
 @media (max-width: 991px) {
   .full-width-color {
@@ -13184,7 +13189,7 @@ button:hover.gold a, button:hover.gold a:before, button:hover.gold span, [type=b
   transition-duration: 0.5s !important;
 }
 .news-feed .news-item .item-container:hover {
-  background: #edcf6e;
+  background: #485eae;
   box-shadow: 10.6px 10.6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 .news-feed .news-item .item-container:hover a {
@@ -13195,7 +13200,7 @@ button:hover.gold a, button:hover.gold a:before, button:hover.gold span, [type=b
 .news-feed .news-item .item-container:hover .above-headline .separator,
 .news-feed .news-item .item-container:hover .read-more,
 .news-feed .news-item .item-container:hover p, .news-feed .news-item .item-container:hover h2 {
-  color: #121416 !important;
+  color: #fff !important;
 }
 @media (max-width: 991px) {
   .news-feed {
@@ -13264,19 +13269,19 @@ button:hover.gold a, button:hover.gold a:before, button:hover.gold span, [type=b
   width: 75px;
 }
 .bottom-cta .action-grid .single-action .icon svg.sign-up path {
-  fill: #9b3555;
+  fill: #485eae;
 }
 .bottom-cta .action-grid .single-action .icon svg.sign-up rect {
-  fill: #fc9690;
+  fill: #8a96c1;
 }
 .bottom-cta .action-grid .single-action .icon svg.donate path, .bottom-cta .action-grid .single-action .icon svg.donate rect {
   fill: #edcf6e;
 }
 .bottom-cta .action-grid .single-action .icon svg.get-involved path {
-  fill: #485eae;
+  fill: #9b3555;
 }
 .bottom-cta .action-grid .single-action .icon svg.get-involved .cls-2 {
-  fill: #8a96c1;
+  fill: #fc9690;
 }
 .bottom-cta .action-grid .single-action h2 {
   text-transform: uppercase;

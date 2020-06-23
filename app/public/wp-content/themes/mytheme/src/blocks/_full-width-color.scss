@@ -13,6 +13,9 @@
     }
     &.yellow {
         background: $c_yellow; 
+        h1, h2, h3, h4, h5 {
+            color: $c_red !important;
+        }
     }
     &.red {
         background: $c_red; 
@@ -25,7 +28,7 @@
         background: $c_pink; 
     }
     &.gray {
-        background: $c_lightgray; 
+        background: $c_pale; 
     }
     @media(max-width: 991px){
         padding: 80px 15px; 

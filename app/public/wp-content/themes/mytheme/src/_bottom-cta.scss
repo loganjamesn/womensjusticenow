@@ -21,15 +21,15 @@
 					height: 75px;
 					width: 75px;
 					&.sign-up {
-						path {fill: $c_red;}
-						rect {fill: $c_pink;}
+						path {fill: $c_blue;}
+						rect {fill: $c_lightblue;}
 					}
 					&.donate {
 						path, rect {fill: $c_gold;}
 					}
 					&.get-involved {
-						path {fill: $c_blue;}
-						.cls-2 {fill: $c_lightblue;}
+						path {fill: $c_red;}
+						.cls-2 {fill: $c_pink;}
 					}
 				}
 			}

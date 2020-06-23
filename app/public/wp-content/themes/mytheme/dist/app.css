@@ -13036,6 +13036,14 @@ button:hover.gold a, button:hover.gold a:before, button:hover.gold span, [type=b
   font-size: 20px !important;
   margin: 0 !important;
 }
+.cta-form .form-embed #can_embed_form #action_welcome_message #action_welcome_message_inner {
+  padding: 30px !important;
+  margin-bottom: 15px !important;
+  background: #373e54 !important;
+}
+.cta-form .form-embed #can_embed_form #action_welcome_message #action_welcome_message_inner div, .cta-form .form-embed #can_embed_form #action_welcome_message #action_welcome_message_inner small {
+  color: #fff !important;
+}
 @media (max-width: 1249px) {
   .cta-form {
     height: auto;
@@ -13371,9 +13379,91 @@ form .form-group button span {
   line-height: 39px;
 }
 
+.signup-form h4 {
+  margin-bottom: 15px !important;
+}
+.signup-form #can_embed_form.can_float {
+  padding: 0 !important;
+  border: 0 !important;
+  background-color: transparent !important;
+}
+.signup-form #can_embed_form.can_float .international_link-wrap,
+.signup-form #can_embed_form.can_float #d_sharing {
+  display: none !important;
+}
+.signup-form #can_embed_form.can_float #can_embed_form_inner > :not(form),
+.signup-form #can_embed_form.can_float #can_embed_form_inner label {
+  display: none !important;
+}
+.signup-form #can_embed_form.can_float #can_embed_form_inner input[type=submit] {
+  background: #485eae !important;
+  border: 3px solid transparent !important;
+  color: #fff !important;
+}
+.signup-form #can_embed_form.can_float #can_embed_form_inner input[type=submit]:hover {
+  background: #41559d !important;
+}
+@media (min-width: 768px) {
+  .signup-form #can_embed_form.can_float #can_embed_form_inner input[type=submit] {
+    width: calc(50% - 7px) !important;
+    float: right !important;
+    margin-top: -65px !important;
+  }
+}
+.signup-form #can_embed_form.can_float #form_col1,
+.signup-form #can_embed_form.can_float #form_col2 {
+  width: 100% !important;
+}
+@media (min-width: 768px) {
+  .signup-form #can_embed_form.can_float #form_col1 .core_field input,
+.signup-form #can_embed_form.can_float #form_col2 .core_field input {
+    width: calc(50% - 7px) !important;
+    float: left !important;
+    height: 50px !important;
+  }
+  .signup-form #can_embed_form.can_float #form_col1 .core_field #form-first_name, .signup-form #can_embed_form.can_float #form_col1 .core_field #form-zip_code,
+.signup-form #can_embed_form.can_float #form_col2 .core_field #form-first_name,
+.signup-form #can_embed_form.can_float #form_col2 .core_field #form-zip_code {
+    margin-right: 14px !important;
+  }
+  .signup-form #can_embed_form.can_float #form_col1 .core_field #form-email,
+.signup-form #can_embed_form.can_float #form_col2 .core_field #form-email {
+    width: 100% !important;
+  }
+}
+.signup-form #can_embed_form.can_float > .clearfix, .signup-form #can_embed_form.can_float > #logo_wrap {
+  display: none !important;
+}
+.signup-form #can_embed_form.can_float #can_thank_you {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 30px 0 0 !important;
+  text-align: left !important;
+}
+.signup-form #can_embed_form.can_float #can_thank_you > :not(#action_thank_you_text) {
+  display: none !important;
+}
+.signup-form #can_embed_form.can_float #can_thank_you #action_thank_you_text .form-success {
+  display: block !important;
+  padding: 30px !important;
+  margin-bottom: 15px !important;
+  background: #373e54 !important;
+}
+.signup-form #can_embed_form.can_float #can_thank_you #action_thank_you_text .form-success p {
+  margin: 0 !important;
+}
+.signup-form #can_embed_form.can_float #action_welcome_message #action_welcome_message_inner {
+  padding: 30px !important;
+  margin-bottom: 15px !important;
+  background: #373e54 !important;
+}
+.signup-form #can_embed_form.can_float #action_welcome_message #action_welcome_message_inner div, .signup-form #can_embed_form.can_float #action_welcome_message #action_welcome_message_inner small {
+  color: #fff !important;
+}
+
 .home .signup-form {
   background: #1c212f;
-  padding: 50px;
+  padding: 50px 50px 35px;
   top: -93px;
   float: right;
   position: relative;
@@ -13389,7 +13479,7 @@ form .form-group button span {
     width: 100%;
     max-width: 100%;
     top: -20px;
-    padding: 30px 30px 15px;
+    padding: 45px 35px;
   }
 }
 .home .full-width-color {

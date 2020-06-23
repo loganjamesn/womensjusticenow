@@ -28,3 +28,92 @@ form {
 		}
 	}
 }
+
+.signup-form {
+	h4 {
+		margin-bottom: 15px !important;
+	}
+	#can_embed_form.can_float {
+		padding: 0 !important;
+		border: 0 !important;
+	    background-color: transparent !important;
+	    .international_link-wrap,
+	    #d_sharing {
+	    	display: none !important;
+	    }
+
+		#can_embed_form_inner {
+			& > :not(form),
+			label {
+				display: none !important;
+			}			
+			input[type=submit] {
+				background: $c_blue !important;
+			  	border: 3px solid transparent !important;
+			  	color: $c_white !important;
+			  	&:hover {
+			  		background: shade($c_blue, 10%) !important;
+			  	}
+			  	@media(min-width: 768px){
+					width: calc(50% - 7px) !important;
+					float: right !important;
+					margin-top: -65px !important;
+			  	}
+			}
+		}
+
+		#form_col1, 
+		#form_col2 {
+			width: 100% !important;
+		  	@media(min-width: 768px){
+				.core_field {
+					input {
+						width: calc(50% - 7px) !important;
+						float: left !important;
+						height: 50px !important;
+					}
+					#form-first_name, #form-zip_code {
+						margin-right: 14px !important;
+					}
+					#form-email {
+						width: 100% !important;
+					}
+				}
+			}
+		}
+
+
+		& > .clearfix,
+		& > #logo_wrap {
+			display: none !important;
+		}	
+		#can_thank_you {
+			background-color: transparent !important;
+			padding: 0 !important;
+			margin: 30px 0 0 !important;
+			text-align: left !important;
+			& > :not(#action_thank_you_text) {
+				display: none !important;
+			}	
+			#action_thank_you_text {
+				.form-success {
+					display: block !important;
+					padding: 30px !important;
+					margin-bottom: 15px !important;
+					background: #373e54 !important;
+					p {
+					    margin: 0 !important;
+					}
+				}
+			}
+		}	
+		#action_welcome_message #action_welcome_message_inner {
+			padding: 30px !important;
+			margin-bottom: 15px !important;
+			background: #373e54 !important;
+			div, small {
+				color: $c_white !important;
+			}
+		}
+	}
+}

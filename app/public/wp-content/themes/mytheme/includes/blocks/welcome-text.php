@@ -22,7 +22,7 @@ if (!empty($block['align'])) {
 			<div class="row">
 				<div class="col-md-5">
 					<?php $button = get_field('left_button'); ?>
-					<button class="red"><a href="<?php echo esc_url($button['button_link']);?>"><?php echo esc_html($button['button_text']);?></a></button>
+					<button class="gold"><a href="<?php echo esc_url($button['button_link']);?>"><?php echo esc_html($button['button_text']);?></a></button>
 				</div>
 				<div class="col-md-7">
 					<?php the_field('right_content');?>
